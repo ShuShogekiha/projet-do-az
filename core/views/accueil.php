@@ -9,7 +9,7 @@
     <main>
         <h1>Nos articles du moment !!</h1>
         <div class="container owl-carousel">
-            <?php echo $listArticle ?>
+            <?= $listArticle ?>
         </div>
     </main>
     

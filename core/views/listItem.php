@@ -16,7 +16,9 @@
     <main>
         <h1>Mes articles </h1>
         <div class="listItem">
-            <?php echo $myArticle ?>
+            <?php if (isset($myArticle)) {
+                echo $myArticle;
+            } ?>
         </div>
     </main>
 

@@ -27,19 +27,20 @@ class ConnexionUtilisateurController {
         
         if($call->execute()) {
             $donnees = $call->fetch();
-            
+
             if(password_verify($user->getPassword(), $donnees['password'])) {
                 session_start();
                 
                 $user->setId($donnees['id']);
                 $user->setPassword(null);
                 $user->setConnexion(true);
+
                 $_SESSION['utilisateur'] = $user;
-                
+
                 header("location: ../../index.php");
             } else {
                 // $timeout = 3;
-                
+
                 // return "Mauvais identifiant ou mot de passe redirection dans ". $timeout ." secondes";
                 return "Mauvais identifiant ou mot de passe";
                 // sleep($timeout);

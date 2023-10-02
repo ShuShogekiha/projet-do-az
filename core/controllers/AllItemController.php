@@ -4,18 +4,18 @@ namespace app\core\controllers;
 
 use app\core\models\BDD;
 
-class AccueilController {
+class AllItemController {
     
-    public static function getViewAccueil(): void {
-        $listArticle = self::getArticleByMoment();
+    public static function getViewAllItem(): void {
+        $listArticle = self::getAllArticle();
 
-        require_once('./core/views/accueil.php');
+        require_once('./core/views/allItem.php');
     }
 
-    public static function getArticleByMoment(): string {
+    public static function getAllArticle(): string {
         $result = "";
         $bdd = new BDD;
-        $call = $bdd->findArticleByMoment();
+        $call = $bdd->findAllArticle();
         
         if ($call->execute()) {
             foreach ($call->fetchAll() as $article) {

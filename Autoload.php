@@ -3,7 +3,7 @@
 namespace app;
 
 class Autoloader {
-    static function register()
+    static function register(): void
     {
         // On récupère la classe avec la constante magique "__CLASS__" et on déclenche la méthode 'autoload'
         spl_autoload_register([
@@ -12,7 +12,7 @@ class Autoloader {
         ]);
     }
 
-    static function autoload($class)
+    static function autoload($class): void
     {
         // On récupère dans $class la totalité du namespace de la classe concernée
         // On retire le namespace

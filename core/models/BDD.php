@@ -44,6 +44,13 @@ class BDD extends PDO {
         return($result);
     }
 
+    /************************** GetArticleByMoment **************************/
+    public function findArticleByMoment(){
+        $requete = 'SELECT * FROM articles LIMIT 5;';
+        $result = $this->connexion->prepare($requete) or die(print_r($result->errorInfo(), TRUE));
+        return($result);
+    }
+
     /************************** EditArticleById **************************/
     public function updateArticleById(): ?PDOStatement {
         $requete = 'UPDATE articles SET designation = ?, img = ?, prix = ? WHERE id = ?';
