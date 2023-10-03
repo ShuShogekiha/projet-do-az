@@ -24,5 +24,5 @@
 
     <?php include_once("./core/views/includes/footer.php"); ?>
 </body>
-
+<script src="./public/js/delete.js"></script>
 </html>

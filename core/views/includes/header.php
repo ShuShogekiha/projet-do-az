@@ -4,7 +4,7 @@
         <div class="header-content">
             <div>
                 <ul>
-                    <li><a href="?query=AllItem">Tout les articles</a></li>
+                    <li><a href="?query=AllItem&page=1">Tout les articles</a></li>
                     <?php
                     if ($_SESSION) {
                         ?>

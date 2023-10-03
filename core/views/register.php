@@ -15,7 +15,7 @@
 
     <main>
         <h1>Inscription</h1>
-        <form action="./core/controllers/CreateUtilisateurController.php" method="post">
+        <form action="/request/CreateUser.php" method="post">
             <div>
                 <label for="mail">E-mail&nbsp;:</label>
                 <input type="email" name="mail" placeholder="E-mail" required>

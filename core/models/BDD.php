@@ -25,7 +25,9 @@ class BDD extends PDO {
     
     /************************** Article **************************/
     public function findAllArticle(): ?PDOStatement {
-        $requete = 'SELECT * FROM articles;';
+        // $requete = 'SELECT * FROM articles;';
+        $offset = 0;
+        $requete = "SELECT * FROM articles LIMIT 3 OFFSET $offset;";
         $result = $this->connexion->prepare($requete) or die(print_r($result->errorInfo(), TRUE));
         return($result);
     }
