@@ -15,7 +15,7 @@
 
     <main>
         <h1>Article <?php echo $donnees['id'] ?? "undefined"; ?></h1>
-        <form action="./core/controllers/EditArticleController.php" method="POST">
+        <form action="EditArticle" method="POST">
             <div>
                 <label for="desi">Nom a modifier&nbsp;:</label>
                 <input type="text" name="desi" placeholder="nom a modifier" value="<?php echo $donnees['designation'] ?? ""; ?>">

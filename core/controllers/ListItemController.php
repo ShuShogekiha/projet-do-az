@@ -30,7 +30,7 @@ class ListItemController
                     <img class="article-img" src="' . $article["img"] . '" alt="illustration de ' . $article["designation"] . '">
                     <h3 class="article-titre">' . $article["designation"] . '</h3>
                         <p class="article-prix_modif">' . $article["prix"] . '€</p>
-                        <a class="article-suppression" href="?DeleteArticle">X</a>
+                        <a class="article-suppression" idItem='. $article['id'].'>X</a>
                         <a class="article-modifier" href="./?query=EditItem&id=' . $article['id'] . '">Modifier</a>
                 </div>';
             }

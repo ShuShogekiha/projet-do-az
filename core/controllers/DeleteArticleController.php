@@ -17,7 +17,7 @@ class DeleteArticleController {
     }
 
     public function suppressArticle(): ?string {
-        $id = filter_var($_POST['id'], FILTER_VALIDATE_INT);
+        $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
         if(!$id) {
             return "L'article n'existe pas ou il à déjà été supprimer";
@@ -27,7 +27,7 @@ class DeleteArticleController {
         $call->bindParam(1, $id, PDO::PARAM_STR);
 
         if($call->execute() && $call->rowCount() == 1) {
-            header('location: ../../index.php');
+            header('location: ../../?query=ListItem');
         }
 
         return "Une erreur est survenue";
@@ -37,8 +37,7 @@ class DeleteArticleController {
 $fonction = new DeleteArticleController;
 
 session_start();
-var_dump($_POST['id']);
-if($_SESSION && isset($_POST['id'])) {
-    var_dump('ici');
+
+if($_SESSION && isset($_GET['id'])) {
     echo $fonction->suppressArticle();
 }

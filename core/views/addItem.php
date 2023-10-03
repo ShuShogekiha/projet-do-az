@@ -15,7 +15,7 @@
 
     <main>
         <h1>Nouvelle article</h1>
-        <form action="/request/CreateArticle.php" method="POST">
+        <form action="CreateArticle" method="POST">
             <div>
                 <label for="desi">Nom de l'article&nbsp;:</label>
                 <input type="text" name="desi" placeholder="nom de l'article">

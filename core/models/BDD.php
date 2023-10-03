@@ -22,12 +22,17 @@ class BDD extends PDO {
             $this->connexion = null;
         }
     }
+
+    /************************** CountMaxArticle **************************/
+    public function countMaxItem(): ?PDOStatement {
+        $requete = "SELECT COUNT(id) AS nb_articles FROM articles;";
+        $result = $this->connexion->prepare($requete) or die(print_r($result->errorInfo(), TRUE));
+        return($result);
+    }
     
     /************************** Article **************************/
     public function findAllArticle(): ?PDOStatement {
-        // $requete = 'SELECT * FROM articles;';
-        $offset = 0;
-        $requete = "SELECT * FROM articles LIMIT 3 OFFSET $offset;";
+        $requete = 'SELECT * FROM articles LIMIT ? OFFSET ?;';
         $result = $this->connexion->prepare($requete) or die(print_r($result->errorInfo(), TRUE));
         return($result);
     }
