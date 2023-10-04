@@ -21,7 +21,6 @@ class AllItemController
 
     private static function checkValidatorPage(): void {
         self::$page = isset($_GET['page']) ? $_GET['page'] -1 : 0;
-
     }
 
     public static function getAllArticle(): string

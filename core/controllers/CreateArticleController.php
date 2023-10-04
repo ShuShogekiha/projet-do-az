@@ -4,7 +4,6 @@ namespace app\core\controllers;
 
 use app\Autoloader;
 use app\core\models\BDD;
-use app\core\models\Utilisateurs;
 use PDO;
 
 require_once('../../Autoload.php');

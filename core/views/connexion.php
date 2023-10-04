@@ -13,7 +13,7 @@
     
     <main>
     <h1>Connexion</h1>
-    <form action="./core/controllers/ConnnexionUtilisateurController.php" method="post">
+    <form action="ConnexionUtilisateur" method="post">
         <div>
             <label for="email">E-mail&nbsp;:</label>
             <input type="email" name="email" placeholder="E-mail" required>

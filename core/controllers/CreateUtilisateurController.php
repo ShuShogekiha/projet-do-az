@@ -20,7 +20,7 @@ class CreateUtilisateurController {
     
     public function validationNewUser() {
         
-        $this->user = new Utilisateurs(0, $_POST['mail'], $_POST['username'], $_POST['mdp'], false);
+        $this->user = new Utilisateurs($_POST['mail'], $_POST['username'], $_POST['mdp'], false, 0);
         
         $result = $this->emailIsValide();
         

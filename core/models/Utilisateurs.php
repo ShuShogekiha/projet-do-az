@@ -9,7 +9,7 @@ class Utilisateurs {
     private ?string $password;
     private bool $connexion = false;
 
-    public function __construct(int $id = 0, string $mail, string $username = null, string $password = null, bool $connexion) {
+    public function __construct(string $mail, string $username = null, string $password = null, bool $connexion, int $id = 0) {
 		// $this->id = $id;
         // $this->$mail = $mail;
         // $this->username = $username;
